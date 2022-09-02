@@ -44,7 +44,7 @@ class Car{
                 this.angle+=0.03*flip;
             }
             if(this.controls.right){
-                this.angle-+0.03*flip;
+                this.angle-=0.03*flip;
                 this.x+=2;
             }
         }
