@@ -4,7 +4,6 @@ class Sensor{
         this.rayCount=3;
         this.rayLength=100;
         this.raySpread=Math.PI/2;
-
         this.rays=[];
         this.readings=[];
     }
@@ -20,7 +19,7 @@ class Sensor{
     }
     #getReading(ray, roadBorders){
          let touches=[];
-         for(let i=0;i<roadBorders.length;i++){
+         for(let i=0;i<roadBorders.length;i++){0
             const touch=getIntersection(
                 ray[0],
                 ray[1],
