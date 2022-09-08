@@ -9,7 +9,7 @@ function getIntersection(A,B,C,D){
     if(bottom!=0){
         const t=tTOP/bottom;
         const u=uTOP/bottom;
-        if(t>0 && t<=1 && u<=1){
+        if(t>=0 && t<=1 && u>=0  && u<=1){
             return {
                 x:lerp(A.x,B.x,t),
                 y:lerp(A.y,B.y,t),
@@ -29,9 +29,12 @@ function polysIntersect(poly1, poly2){
                 poly2[(j+1)%poly2.length]
             );
             if(touch){
+                // console.log(poly2[3])
+                // console.log(poly1[3])
                 return true;
             }
         }
-    }
+    } 
     return false;
+
 }
